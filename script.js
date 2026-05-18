@@ -1,6 +1,6 @@
 /* ============================================
-   HIGH-END MODERN PORTFOLIO
-   Interactive Features & Animations
+   MODERN DARK PORTFOLIO - JAVASCRIPT
+   Interactive Features & Functionality
    ============================================ */
 
 // ============= DOM ELEMENTS =============
@@ -108,7 +108,7 @@ function handleFormSubmit(e) {
     }
     
     // Success
-    showNotification('Message sent! I\'ll get back to you soon.', 'success');
+    showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
     contactForm.reset();
     
     console.log('Form Data:', { name, email, message, timestamp: new Date() });
@@ -126,7 +126,7 @@ function showNotification(message, type) {
     notification.textContent = message;
     
     const bgColor = type === 'success' 
-        ? 'rgba(14, 165, 233, 0.95)' 
+        ? 'rgba(255, 107, 0, 0.95)' 
         : 'rgba(239, 68, 68, 0.95)';
     
     notification.style.cssText = `
@@ -136,13 +136,12 @@ function showNotification(message, type) {
         padding: 16px 24px;
         background: ${bgColor};
         color: white;
-        border-radius: 10px;
+        border-radius: 8px;
         font-weight: 600;
         font-size: 0.95rem;
         z-index: 2000;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 107, 0, 0.3);
         animation: notificationSlideIn 0.3s ease-out;
     `;
     
@@ -171,7 +170,7 @@ const animationObserver = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.querySelectorAll(
-    '.about-card, .experience-card, .skill-card, .project-card, .social-link'
+    '.about-card, .experience-card, .skill-card, .project-card'
 ).forEach(el => {
     animationObserver.observe(el);
 });
@@ -213,6 +212,17 @@ animationStyles.textContent = `
     .animate-in {
         animation: fadeInUp 0.6s ease-out !important;
     }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 `;
 document.head.appendChild(animationStyles);
 
@@ -227,10 +237,10 @@ scrollBtn.style.cssText = `
     right: 30px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+    background: linear-gradient(135deg, #ff6b00, #ff8533);
     color: white;
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -239,7 +249,7 @@ scrollBtn.style.cssText = `
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
 `;
 
 document.body.appendChild(scrollBtn);
@@ -266,12 +276,12 @@ scrollBtn.addEventListener('click', () => {
 // Scroll button hover effects
 scrollBtn.addEventListener('mouseenter', () => {
     scrollBtn.style.transform = 'translateY(-5px) scale(1.1)';
-    scrollBtn.style.boxShadow = '0 15px 40px rgba(14, 165, 233, 0.5)';
+    scrollBtn.style.boxShadow = '0 15px 40px rgba(255, 107, 0, 0.5)';
 });
 
 scrollBtn.addEventListener('mouseleave', () => {
     scrollBtn.style.transform = 'translateY(0) scale(1)';
-    scrollBtn.style.boxShadow = '0 10px 30px rgba(14, 165, 233, 0.3)';
+    scrollBtn.style.boxShadow = '0 10px 30px rgba(255, 107, 0, 0.3)';
 });
 
 // ============= ACCESSIBILITY =============
@@ -291,21 +301,16 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
 // ============= PAGE INITIALIZATION =============
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('✨ Premium Portfolio Loaded');
+    console.log('✨ Professional Portfolio Loaded');
     updateActiveNavLink();
     
-    // Add loading state
+    // Add fade in effect
     document.body.style.opacity = '1';
 });
 
 // Fade in body on load
 document.body.style.opacity = '0';
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        document.body.style.transition = 'opacity 0.5s ease-out';
-        document.body.style.opacity = '1';
-    });
-} else {
+window.addEventListener('load', () => {
     document.body.style.transition = 'opacity 0.5s ease-out';
     document.body.style.opacity = '1';
-}
+});
