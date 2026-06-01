@@ -310,9 +310,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoplayId = null;
 
     function update() {
-        const offset = -current * 100;
-        track.style.transform = `translateX(${offset}%)`;
-        slides.forEach((s, i) => s.classList.toggle('active', i === current));
+        slides.forEach((s, i) => {
+            const active = i === current;
+            s.classList.toggle('active', active);
+            s.setAttribute('aria-hidden', !active);
+            s.style.zIndex = active ? 2 : 1;
+        });
         indicators.forEach((b, i) => b.classList.toggle('active', i === current));
     }
 

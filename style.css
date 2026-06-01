@@ -176,32 +176,21 @@ body::after {
 }
 
 /* ============= HERO SECTION ============= */
-section {
+.section {
     position: relative;
     z-index: 1;
 }
 
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 100px 0 80px;
+    width: 100%;
+    min-height: 760px;
+    display: block;
+    padding: 0;
     margin-top: 60px;
 }
 
 .container-hero {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    width: 100%;
-}
-
-.hero-left {
-    animation: fadeInUp 0.8s ease-out;
+    display: none;
 }
 
 .hero-label {
@@ -311,19 +300,9 @@ section {
     height: 20px;
 }
 
-.hero-right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: fadeInUp 0.8s ease-out 0.2s both;
-}
+.hero-right { display: none }
 
-.hero-image-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 820px;
-    height: 560px;
-}
+.hero-image-wrapper { display: none }
 
 .hero-image {
     width: 100%;
@@ -352,88 +331,80 @@ section {
     height: 100%;
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
-    display: block;
 }
 
 .carousel-track {
-    display: flex;
-    width: 300%;
+    position: relative;
+    width: 100%;
     height: 100%;
-    transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .carousel-slide {
-    min-width: 100%;
-    height: 100%;
-    position: relative;
-    display: block;
-}
-
-/* Background visuals - crafted gradients + abstract SVG overlays to emulate SOC/dashboard visuals */
-.carousel-slide .slide-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10,10,10,0.45), rgba(10,10,10,0.6));
-    mix-blend-mode: multiply;
-    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.9s ease, visibility 0.3s ease;
+    background-size: cover;
+    background-position: center;
 }
 
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* crafted dark backgrounds to emulate SOC/dashboard imagery */
 .carousel-slide.slide-1 {
-    background-image:
-        radial-gradient(circle at 20% 20%, rgba(255,107,0,0.06), transparent 12%),
-        linear-gradient(120deg, rgba(6,15,27,0.9), rgba(2,6,12,0.85)),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700"><rect width="100%" height="100%" fill="%23020b12"/><g stroke="%231b1f2b" stroke-opacity="0.5" stroke-width="1"><path d="M0 120 L1200 120 M0 240 L1200 240 M0 360 L1200 360"/></g></svg>');
-    background-size: cover, cover, cover;
-    background-position: center left, center, center;
+    background-image: linear-gradient(180deg, rgba(2,6,12,0.72), rgba(3,6,10,0.72)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900"><rect width="100%" height="100%" fill="%2304080b"/><g stroke="%23222b33" stroke-width="1" opacity="0.6"><path d="M0 120 L1600 120 M0 240 L1600 240 M0 360 L1600 360"/></g></svg>');
 }
 
 .carousel-slide.slide-2 {
-    background-image:
-        radial-gradient(circle at 80% 25%, rgba(255,107,0,0.05), transparent 12%),
-        linear-gradient(120deg, rgba(3,8,20,0.9), rgba(6,12,22,0.88)),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700"><rect width="100%" height="100%" fill="%23020b12"/><g fill="none" stroke="%231a2b3b" stroke-opacity="0.5"><circle cx="100" cy="120" r="60"/><circle cx="300" cy="220" r="40"/><path d="M0 600 L1200 200"/></g></svg>');
-    background-size: cover, cover, cover;
-    background-position: center right, center, center;
+    background-image: linear-gradient(180deg, rgba(1,4,10,0.72), rgba(4,8,14,0.72)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900"><rect width="100%" height="100%" fill="%2302070b"/><g stroke="%231a2430" opacity="0.55"><circle cx="140" cy="160" r="68"/><circle cx="420" cy="260" r="48"/></g></svg>');
 }
 
 .carousel-slide.slide-3 {
-    background-image:
-        radial-gradient(circle at 50% 10%, rgba(255,107,0,0.04), transparent 12%),
-        linear-gradient(120deg, rgba(2,6,14,0.9), rgba(4,10,18,0.88)),
-        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700"><rect width="100%" height="100%" fill="%23020b12"/><g stroke="%231b2b3b" stroke-opacity="0.45"><path d="M100 0 L100 700 M300 0 L300 700 M500 0 L500 700"/></g></svg>');
-    background-size: cover, cover, cover;
-    background-position: center, center, center;
+    background-image: linear-gradient(180deg, rgba(2,6,14,0.72), rgba(4,10,18,0.72)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900"><rect width="100%" height="100%" fill="%2303070a"/><g stroke="%231b2b3b" opacity="0.5"><path d="M100 0 L100 900 M300 0 L300 900 M500 0 L500 900"/></g></svg>');
 }
 
-.slide-inner { position: relative; z-index: 2; height: 100%; display: flex; align-items: center; }
-.slide-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,107,0,0.08); backdrop-filter: blur(8px); padding: 28px; border-radius: 14px; max-width: 520px; color: var(--text-white); }
-.slide-card h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); color: var(--text-white); margin-bottom: 8px; }
-.slide-card .lead { font-size: 1.05rem; color: var(--accent-orange); font-weight:700; margin-bottom: 12px; }
-.slide-card .desc { color: var(--text-gray); margin-bottom: 16px; line-height:1.5 }
-.slide-cta .btn { margin-right: 10px }
+.slide-overlay { position: absolute; inset:0; background: rgba(3,6,10,0.35); z-index:1 }
+
+.slide-inner { position: relative; z-index: 2; height: 100%; display: flex; align-items: center }
+.slide-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015)); border: 1px solid rgba(255,107,0,0.06); backdrop-filter: blur(10px); padding: 36px; border-radius: 16px; max-width: 760px; color: var(--text-white); margin-top: 0 }
+.hero-label { color: var(--accent-orange); font-weight:700; letter-spacing:1px; margin-bottom:8px }
+.hero-title { font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 6px }
+.hero-title .highlight { color: var(--accent-orange) }
+.hero-subtitle { font-size: 1.6rem; color: var(--text-gray); margin-bottom: 16px }
+.hero-description { color: var(--text-gray); font-size: 1.05rem; line-height:1.6; margin-bottom: 20px }
+.hero-buttons .btn { margin-right: 12px }
 
 /* Controls */
-.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(6,8,10,0.5); color: var(--text-white); border: 1px solid rgba(255,107,0,0.12); width: 48px; height: 48px; border-radius: 10px; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:3 }
-.carousel-btn.prev { left: 12px }
-.carousel-btn.next { right: 12px }
+.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(6,8,10,0.5); color: var(--text-white); border: 1px solid rgba(255,107,0,0.12); width: 56px; height: 56px; border-radius: 12px; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:3 }
+.carousel-btn.prev { left: 24px }
+.carousel-btn.next { right: 24px }
 .carousel-btn:hover { background: rgba(255,107,0,0.12); color: var(--accent-orange) }
 
-.carousel-indicators { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); display:flex; gap:10px; z-index:3 }
+.carousel-indicators { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); display:flex; gap:12px; z-index:3 }
 .carousel-indicators button { width: 12px; height: 12px; border-radius:50%; background: rgba(255,255,255,0.06); border: none; cursor:pointer }
-.carousel-indicators button.active { background: var(--accent-orange); box-shadow: 0 8px 30px rgba(255,107,0,0.18) }
+.carousel-indicators button.active { background: var(--accent-orange); box-shadow: 0 10px 40px rgba(255,107,0,0.18) }
 
-/* Responsive */
+/* Layout: center slide-card horizontally on desktop (left-align on wide screens) */
+.slide-inner.container { display:flex }
+.slide-card { margin-left: 40px }
+
+@media (min-width:1200px) {
+    .slide-card { margin-left: 80px }
+}
+
 @media (max-width: 900px) {
-    .hero-image-wrapper { max-width: 700px; height: 520px }
-    .slide-card { max-width: 420px; padding: 20px }
+    .hero { min-height: 700px }
+    .slide-card { max-width: 520px; padding: 24px; margin-left: 24px }
 }
 
 @media (max-width: 600px) {
-    .container-hero { grid-template-columns: 1fr; gap: 30px }
-    .hero-image-wrapper { width: 100%; height: 480px }
-    .slide-card { margin: 0 auto; text-align: center }
-    .carousel-btn { width: 40px; height: 40px }
+    .hero { min-height: 640px }
+    .slide-card { max-width: 90%; margin: 0 auto; text-align: center }
+    .carousel-btn { width: 44px; height: 44px }
 }
 
 .image-glow {
