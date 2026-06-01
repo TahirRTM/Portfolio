@@ -299,6 +299,55 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.head.appendChild(noMotionStyle);
 }
 
+// ============= HERO CAROUSEL FUNCTIONALITY =============
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const indicators = Array.from(document.querySelectorAll('.carousel-indicators button'));
+    let current = 0;
+    let autoplayId = null;
+
+    function update() {
+        const offset = -current * 100;
+        track.style.transform = `translateX(${offset}%)`;
+        slides.forEach((s, i) => s.classList.toggle('active', i === current));
+        indicators.forEach((b, i) => b.classList.toggle('active', i === current));
+    }
+
+    function next() { current = (current + 1) % slides.length; update(); }
+    function prev() { current = (current - 1 + slides.length) % slides.length; update(); }
+
+    nextBtn.addEventListener('click', () => { next(); restartAutoplay(); });
+    prevBtn.addEventListener('click', () => { prev(); restartAutoplay(); });
+
+    indicators.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            current = Number(btn.dataset.slide);
+            update();
+            restartAutoplay();
+        });
+    });
+
+    function startAutoplay() { autoplayId = setInterval(next, 4200); }
+    function stopAutoplay() { if (autoplayId) clearInterval(autoplayId); }
+    function restartAutoplay() { stopAutoplay(); startAutoplay(); }
+
+    const carousel = document.querySelector('.hero-carousel');
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    // Initialize
+    update();
+    startAutoplay();
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { next(); restartAutoplay(); }
+        if (e.key === 'ArrowLeft') { prev(); restartAutoplay(); }
+    });
+});
+
 // ============= PAGE INITIALIZATION =============
 document.addEventListener('DOMContentLoaded', () => {
     console.log('✨ Professional Portfolio Loaded');
