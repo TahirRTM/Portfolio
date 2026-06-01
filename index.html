@@ -1,380 +1,205 @@
-    <!-- Hero Section (Full-width Carousel) -->
-    <section id="home" class="hero">
-        <div class="hero-carousel" aria-roledescription="carousel">
-            <div class="carousel-track">
-                <article class="carousel-slide slide-1 active" aria-hidden="false">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-inner container">
-                        <div class="slide-card">
-                            <p class="hero-label">Welcome to my portfolio</p>
-                            <h1 class="hero-title">Hi, I'm <span class="highlight">Tahir Mushtaq</span></h1>
-                            <p class="hero-subtitle">Senior Cybersecurity Specialist</p>
-                            <p class="hero-description">Professional cybersecurity specialist focused on threat intelligence, penetration testing, endpoint security, and enterprise cyber defense operations.</p>
-                            <div class="hero-buttons">
-                                <a href="#contact" class="btn btn-primary">Contact Me</a>
-                                <a href="#projects" class="btn btn-secondary">View Projects</a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="carousel-slide slide-2" aria-hidden="true">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-inner container">
-                        <div class="slide-card">
-                            <p class="hero-label">Penetration Testing &amp; Red Teaming</p>
-                            <h1 class="hero-title">Hi, I'm <span class="highlight">Tahir Mushtaq</span></h1>
-                            <p class="hero-subtitle">Senior Cybersecurity Specialist</p>
-                            <p class="hero-description">Professional cybersecurity specialist focused on offensive assessments, emulating adversaries and hardening systems before attackers strike.</p>
-                            <div class="hero-buttons">
-                                <a href="#projects" class="btn btn-primary">View Engagements</a>
-                                <a href="#contact" class="btn btn-secondary">Request Assessment</a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-                <article class="carousel-slide slide-3" aria-hidden="true">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-inner container">
-                        <div class="slide-card">
-                            <p class="hero-label">Threat Intelligence &amp; Incident Response</p>
-                            <h1 class="hero-title">Hi, I'm <span class="highlight">Tahir Mushtaq</span></h1>
-                            <p class="hero-subtitle">Senior Cybersecurity Specialist</p>
-                            <p class="hero-description">Professional cybersecurity specialist focused on threat hunting, incident response and delivering actionable intelligence to stakeholders.</p>
-                            <div class="hero-buttons">
-                                <a href="#contact" class="btn btn-primary">Talk To An Expert</a>
-                                <a href="#about" class="btn btn-secondary">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-            <button class="carousel-btn prev" aria-label="Previous">‹</button>
-            <button class="carousel-btn next" aria-label="Next">›</button>
-            <div class="carousel-indicators">
-                <button data-slide="0" class="active" aria-label="Slide 1"></button>
-                <button data-slide="1" aria-label="Slide 2"></button>
-                <button data-slide="2" aria-label="Slide 3"></button>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tahir Mushtaq — Senior Cybersecurity Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="nav-inner container">
+            <div class="brand">Tahir</div>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </section>
-                            </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/tahir-mushtaq-029700321/" class="social-icon" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.438-.103.25-.129.599-.129.948v5.419h-3.554s.05-8.786 0-9.714h3.554v1.375c.427-.659 1.191-1.595 2.897-1.595 2.117 0 3.704 1.385 3.704 4.362v5.572zM5.337 8.855c-1.144 0-1.915-.758-1.915-1.705 0-.955.768-1.703 1.959-1.703 1.188 0 1.915.748 1.937 1.703 0 .947-.749 1.705-1.981 1.705zm1.608 11.597H3.635V9.738h3.31v10.714zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
-                            </svg>
-                        </a>
-                        <a href="mailto:tahirmushtaqrana@gmail.com" class="social-icon" aria-label="Email">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </a>
-                        <a href="https://www.facebook.com/tahirmushtaq" class="social-icon" aria-label="Facebook">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-right">
-                <div class="hero-image-wrapper">
-                    <div class="hero-image">
-                        <div class="hero-carousel" aria-roledescription="carousel">
-                            <div class="carousel-track">
-                                <section class="carousel-slide slide-1 active" aria-hidden="false">
-                                    <div class="slide-overlay"></div>
-                                    <div class="slide-inner container">
-                                        <div class="slide-card">
-                                            <h2>Advanced Cyber Defense</h2>
-                                            <p class="lead">Protecting Digital Infrastructure</p>
-                                            <p class="desc">Enterprise-grade SOC, continuous monitoring, and proactive defense strategies to secure critical assets.</p>
-                                            <div class="slide-cta">
-                                                <a href="#contact" class="btn btn-primary">Get Consultation</a>
-                                                <a href="#projects" class="btn btn-secondary">Our Services</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="carousel-slide slide-2" aria-hidden="true">
-                                    <div class="slide-overlay"></div>
-                                    <div class="slide-inner container">
-                                        <div class="slide-card">
-                                            <h2>Penetration Testing &amp; Red Teaming</h2>
-                                            <p class="lead">Finding Vulnerabilities Before Attackers Do</p>
-                                            <p class="desc">Blended automated and manual assessments to emulate adversaries and harden systems.</p>
-                                            <div class="slide-cta">
-                                                <a href="#projects" class="btn btn-primary">View Engagements</a>
-                                                <a href="#contact" class="btn btn-secondary">Request Assessment</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section class="carousel-slide slide-3" aria-hidden="true">
-                                    <div class="slide-overlay"></div>
-                                    <div class="slide-inner container">
-                                        <div class="slide-card">
-                                            <h2>Threat Intelligence &amp; Incident Response</h2>
-                                            <p class="lead">Detect, Analyze, Respond</p>
-                                            <p class="desc">Actionable intelligence and rapid incident containment to minimize business impact.</p>
-                                            <div class="slide-cta">
-                                                <a href="#contact" class="btn btn-primary">Talk To An Expert</a>
-                                                <a href="#about" class="btn btn-secondary">Learn More</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                            <button class="carousel-btn prev" aria-label="Previous">‹</button>
-                            <button class="carousel-btn next" aria-label="Next">›</button>
-                            <div class="carousel-indicators">
-                                <button data-slide="0" class="active" aria-label="Slide 1"></button>
-                                <button data-slide="1" aria-label="Slide 2"></button>
-                                <button data-slide="2" aria-label="Slide 3"></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="image-glow"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p class="about-intro">I'm a dedicated cybersecurity professional with 1+ years of experience protecting enterprise systems against evolving digital threats. My expertise spans threat intelligence, penetration testing, endpoint security, and comprehensive security architecture design.</p>
-                
-                <div class="about-grid">
-                    <div class="about-card">
-                        <div class="about-number">01</div>
+    <!-- HERO: Full-width immersive carousel -->
+    <main>
+        <section id="home" class="hero">
+            <div class="carousel" id="heroCarousel" aria-roledescription="carousel">
+                <div class="slides">
+                    <article class="slide active" data-index="0" aria-hidden="false">
+                        <div class="slide-bg slide-bg-1"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content container">
+                            <div class="glass-card">
+                                <p class="tag">WELCOME TO MY PORTFOLIO</p>
+                                <h1 class="name">Hi, I’m <span class="accent">Tahir Mushtaq</span></h1>
+                                <h3 class="role">Senior Cybersecurity Specialist</h3>
+                                <p class="summary">Professional cybersecurity specialist with 1+ years of experience protecting enterprise systems against evolving digital threats. Expertise includes threat intelligence, penetration testing, endpoint security, SOC operations, and enterprise cyber defense architecture.</p>
+                                <div class="cta">
+                                    <a href="#contact" class="btn primary">Contact Me</a>
+                                    <a href="#projects" class="btn secondary">View Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="slide" data-index="1" aria-hidden="true">
+                        <div class="slide-bg slide-bg-2"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content container">
+                            <div class="glass-card">
+                                <p class="tag">PENETRATION TESTING & RED TEAMING</p>
+                                <h1 class="name">Hi, I’m <span class="accent">Tahir Mushtaq</span></h1>
+                                <h3 class="role">Senior Cybersecurity Specialist</h3>
+                                <p class="summary">Offensive security expert focused on emulating adversaries, finding vulnerabilities, and hardening enterprise systems before attackers do.</p>
+                                <div class="cta">
+                                    <a href="#projects" class="btn primary">View Engagements</a>
+                                    <a href="#contact" class="btn secondary">Request Assessment</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="slide" data-index="2" aria-hidden="true">
+                        <div class="slide-bg slide-bg-3"></div>
+                        <div class="slide-overlay"></div>
+                        <div class="slide-content container">
+                            <div class="glass-card">
+                                <p class="tag">THREAT INTELLIGENCE & INCIDENT RESPONSE</p>
+                                <h1 class="name">Hi, I’m <span class="accent">Tahir Mushtaq</span></h1>
+                                <h3 class="role">Senior Cybersecurity Specialist</h3>
+                                <p class="summary">Delivering actionable intelligence, rapid incident containment and analytics to reduce business impact from cyber threats.</p>
+                                <div class="cta">
+                                    <a href="#contact" class="btn primary">Talk To An Expert</a>
+                                    <a href="#about" class="btn secondary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <button class="carousel-nav prev" aria-label="Previous">‹</button>
+                <button class="carousel-nav next" aria-label="Next">›</button>
+                <div class="carousel-dots" role="tablist" aria-label="Carousel indicators">
+                    <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+                    <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+                    <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <p class="lead">I'm a dedicated cybersecurity professional with 1+ years of experience protecting enterprise systems against evolving digital threats.</p>
+
+                <div class="features">
+                    <div class="feature">
+                        <div class="num">01</div>
                         <h3>Strategic Focus</h3>
-                        <p>Combining cutting-edge security expertise with strategic threat intelligence to protect critical infrastructure.</p>
+                        <p>Threat intelligence and strategic defense for critical infrastructure.</p>
                     </div>
-                    <div class="about-card">
-                        <div class="about-number">02</div>
+                    <div class="feature">
+                        <div class="num">02</div>
                         <h3>Technical Excellence</h3>
-                        <p>Specialized in penetration testing, endpoint security operations, and enterprise defense mechanisms.</p>
+                        <p>Penetration testing, endpoint security and enterprise defense systems.</p>
                     </div>
-                    <div class="about-card">
-                        <div class="about-number">03</div>
+                    <div class="feature">
+                        <div class="num">03</div>
                         <h3>NAVTTC Certified</h3>
-                        <p>Officially certified with multiple industry-recognized cybersecurity certifications and continuous professional development.</p>
+                        <p>Certified professional with continuous skill development.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="experience-icon">🎯</div>
-                    <h3>Cybersecurity Specialist</h3>
-                    <p class="company">IP Centric NASTP</p>
-                    <p class="duration">Current</p>
-                    <p class="description">Lead enterprise security initiatives, conduct comprehensive threat assessments, and manage strategic security architectures for critical infrastructure.</p>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-icon">🔍</div>
-                    <h3>Threat Intelligence Analyst</h3>
-                    <p class="company">Recorded Future</p>
-                    <p class="duration">2026 - Present</p>
-                    <p class="description">Monitor global threat landscape, analyze security indicators, and produce actionable intelligence reports for stakeholders.</p>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-icon">🛡️</div>
-                    <h3>Endpoint Security Operations</h3>
-                    <p class="company">SentinelOne</p>
-                    <p class="duration">2026 - Present</p>
-                    <p class="description">Design and deploy endpoint protection solutions with advanced threat detection and automated response capabilities.</p>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-icon">🔐</div>
-                    <h3>Penetration Testing Specialist</h3>
-                    <p class="company">Metasploit Pro</p>
-                    <p class="duration">2025 - Present</p>
-                    <p class="description">Perform comprehensive security assessments, identify critical vulnerabilities, and provide remediation guidance.</p>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-icon">📚</div>
-                    <h3>NAVTTC Certified Training</h3>
-                    <p class="company">Sure Secure Solutions</p>
-                    <p class="duration">Aug 2025 - Oct 2025</p>
-                    <p class="description">Completed intensive cybersecurity training with NAVTTC certification in advanced security fundamentals and best practices.</p>
-                </div>
-                <div class="experience-card">
-                    <div class="experience-icon">⚡</div>
-                    <h3>Vice President</h3>
-                    <p class="company">IT Computing Society</p>
-                    <p class="duration">2024 - 2025</p>
-                    <p class="description">Led technology initiatives, organized security workshops, and fostered cybersecurity awareness among students.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Core Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🎯</div>
-                    <h3>Threat Intelligence</h3>
-                    <p class="skill-description">Deep analysis of cyber threats, vulnerability assessment, and strategic threat landscape monitoring for proactive defense.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔍</div>
-                    <h3>Penetration Testing</h3>
-                    <p class="skill-description">Comprehensive security assessments, ethical hacking, and security vulnerability identification with detailed remediation strategies.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🛡️</div>
-                    <h3>Endpoint Security</h3>
-                    <p class="skill-description">Enterprise endpoint protection, threat detection, and response orchestration for comprehensive device security.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Network Security & Analysis</h3>
-                    <p class="skill-description">Network infrastructure security, traffic analysis, intrusion detection, and secure network architecture design.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Development & Tools</h3>
-                    <p class="skill-description">Security automation, scripting, and tool development. Proficient with Python, Bash, and industry-standard security frameworks.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">✨</div>
-                    <h3>AR/VR & Creative Tech</h3>
-                    <p class="skill-description">Experience with emerging technologies including augmented reality, virtual reality, and innovative security applications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Automated Vulnerability Scanner</div>
+        <!-- EXPERIENCE -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="timeline">
+                    <div class="timelined-item">
+                        <div class="time">Current</div>
+                        <div class="card"><h4>Cybersecurity Specialist</h4><p>IP Centric NASTP</p></div>
                     </div>
-                    <div class="project-content">
-                        <h3>Automated Vulnerability Scanner</h3>
-                        <p>Enterprise-grade vulnerability scanning tool with automated threat detection and reporting capabilities.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Security</span>
-                        </div>
+                    <div class="timelined-item">
+                        <div class="time">2026</div>
+                        <div class="card"><h4>Threat Intelligence Analyst</h4><p>Recorded Future</p></div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Metasploitable Pro</div>
+                    <div class="timelined-item">
+                        <div class="time">2026</div>
+                        <div class="card"><h4>Endpoint Security Operations</h4><p>SentinelOne</p></div>
                     </div>
-                    <div class="project-content">
-                        <h3>Metasploitable Pro</h3>
-                        <p>Enhanced penetration testing environment with vulnerable systems for hands-on security training.</p>
-                        <div class="project-tags">
-                            <span class="tag">Linux</span>
-                            <span class="tag">Penetration Testing</span>
-                        </div>
+                    <div class="timelined-item">
+                        <div class="time">2025</div>
+                        <div class="card"><h4>Penetration Testing Specialist</h4><p>Metasploit Pro</p></div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Email Detection Tool</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Phishing Email Detection Tool</h3>
-                        <p>AI-powered phishing detection system protecting organizations from email-based security threats.</p>
-                        <div class="project-tags">
-                            <span class="tag">Machine Learning</span>
-                            <span class="tag">Security</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Assessment Tool</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Network Vulnerability Assessment</h3>
-                        <p>Professional network assessment platform for identifying and prioritizing security vulnerabilities.</p>
-                        <div class="project-tags">
-                            <span class="tag">Network Security</span>
-                            <span class="tag">Assessment</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Wazuh SOC Setup</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Wazuh SOC Monitoring Setup</h3>
-                        <p>Enterprise Security Operations Center (SOC) implementation with Wazuh. Real-time threat detection, log analysis, compliance monitoring, and automated response orchestration for threat mitigation.</p>
-                        <div class="project-tags">
-                            <span class="tag">Wazuh</span>
-                            <span class="tag">SOC</span>
-                            <span class="tag">SIEM</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">Security Automation</div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Advanced Security Automation Framework</h3>
-                        <p>Python-based security automation framework for threat response, incident handling, and security policy enforcement. Integrates with multiple security tools and provides automated remediation capabilities.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">Automation</span>
-                            
-                        </div>
+                    <div class="timelined-item">
+                        <div class="time">2025</div>
+                        <div class="card"><h4>NAVTTC Certified Training</h4><p>Sure Secure Solutions</p></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-wrapper">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Your Message" rows="6" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+        <!-- SKILLS -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Core Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill"> <div class="icon">🎯</div><h4>Threat Intelligence</h4><p>Landscape monitoring & analysis</p></div>
+                    <div class="skill"> <div class="icon">🔍</div><h4>Penetration Testing</h4><p>Ethical hacking & red teaming</p></div>
+                    <div class="skill"> <div class="icon">🛡️</div><h4>Endpoint Security</h4><p>EDR & protection systems</p></div>
+                    <div class="skill"> <div class="icon">🌐</div><h4>Network Security</h4><p>Traffic analysis & architecture</p></div>
+                    <div class="skill"> <div class="icon">⚙️</div><h4>Development & Automation</h4><p>Python, Bash & tooling</p></div>
+                    <div class="skill"> <div class="icon">✨</div><h4>AR/VR & Emerging Tech</h4><p>Innovative security solutions</p></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Tahir Mushtaq. All rights reserved.</p>
+        <!-- PROJECTS -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card"><h4>Automated Vulnerability Scanner</h4><p>Python · Security</p></div>
+                    <div class="project-card"><h4>Metasploitable Pro Lab</h4><p>Penetration Testing Environment</p></div>
+                    <div class="project-card"><h4>Phishing Email Detection Tool</h4><p>ML · Security</p></div>
+                    <div class="project-card"><h4>Network Vulnerability Assessment</h4><p>Assessment Platform</p></div>
+                    <div class="project-card"><h4>Wazuh SOC Setup</h4><p>SOC Implementation</p></div>
+                    <div class="project-card"><h4>Advanced Security Automation</h4><p>Automation Framework</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-wrap">
+                    <form id="contactForm" class="contact-form">
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                        <textarea id="message" name="message" placeholder="Message" rows="6" required></textarea>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>© 2025 Tahir Mushtaq</div>
+            <div>Cybersecurity Specialist Portfolio</div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
